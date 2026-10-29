@@ -1,0 +1,56 @@
+/* DevClub site: dark theme like the app. No external fonts, no scripts, no trackers. */
+:root {
+  --bg: #0a0a0b;
+  --surface: #141417;
+  --border: #26262b;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --accent: #34d399;
+  --on-accent: #07130d;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+header.site {
+  display: flex; align-items: center; gap: 12px;
+  max-width: 720px; margin: 0 auto; padding: 20px 16px 0;
+}
+header.site img { width: 36px; height: 36px; border-radius: 9px; }
+header.site a.brand { color: var(--text); font-weight: 700; font-size: 1.15rem; text-decoration: none; }
+main { max-width: 720px; margin: 0 auto; padding: 24px 16px 56px; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 8px 0 4px; }
+h2 { font-size: 1.25rem; margin: 2.2em 0 0.4em; }
+h3 { font-size: 1.05rem; margin: 1.6em 0 0.2em; }
+p, li { color: #d4d4d8; }
+.muted { color: var(--muted); }
+ul { padding-left: 1.2em; }
+li { margin: 0.25em 0; }
+table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.95rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 16px 18px; margin: 16px 0;
+}
+.button {
+  display: inline-block; background: var(--accent); color: var(--on-accent);
+  font-weight: 700; text-decoration: none; padding: 14px 26px; border-radius: 999px;
+}
+.button:hover { filter: brightness(1.08); }
+footer {
+  max-width: 720px; margin: 0 auto; padding: 24px 16px 40px;
+  border-top: 1px solid var(--border); color: var(--muted); font-size: 0.92rem;
+}
+footer a { color: var(--muted); margin-right: 16px; }
+.hero { text-align: center; padding: 8vh 0 4vh; }
+.hero img { width: 96px; height: 96px; border-radius: 22px; }
+.hero h1 { font-size: 2.6rem; margin-top: 20px; }
+.hero p.pitch { font-size: 1.2rem; color: var(--text); max-width: 30em; margin: 12px auto 28px; }
+@media (max-width: 480px) { .hero h1 { font-size: 2.1rem; } h1 { font-size: 1.6rem; } }
